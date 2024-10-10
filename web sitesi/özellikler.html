@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern ve Minimalist Yazılım Web Sitesi</title>
+    <link rel="stylesheet" href="styles.css">
+<style>
+    body {
+        font-family: 'Helvetica Neue', sans-serif;
+        background-color: #f5f5f5;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    header {
+        text-align: center;
+        padding: 50px 0;
+    }
+    
+    header h1 {
+        margin: 0;
+        font-size: 2.5em;
+        color: #007BFF;
+    }
+    
+    .features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+    }
+    
+    .feature-item {
+        flex: 1 1 300px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+        border: 2px solid #e7e7e7;
+    }
+    
+    .feature-item:hover {
+        transform: translateY(-5px);
+        border-color: #007BFF;
+    }
+    
+    .feature-item img {
+        max-width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+    
+    .feature-item h2 {
+        margin-top: 0;
+        color: #007BFF;
+    }
+    
+    .feature-item p {
+        margin: 0;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 20px 0;
+        font-size: 0.9em;
+        color: #888;
+        background-color: #f5f5f5;
+        border-top: 1px solid #e7e7e7;
+    }
+    
+    @media screen and (max-width: 768px) {
+        .feature-item {
+            flex: 1 1 100%;
+        }
+    }
+    
+    button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        background-color: #007BFF;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    
+    nav {
+        background: #007BFF;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: inline-block;
+        transition: background 0.3s;
+    }
+    
+    nav a:hover {
+        background: #0056b3;
+    }
+    
+    section {
+        padding: 20px 0;
+    }
+    
+    section h2 {
+        font-size: 2em;
+        color: #007BFF;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    section p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    
+    .testimonials {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    .testimonial-item {
+        flex: 1 1 300px;
+        margin: 10px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+    }
+    
+    .testimonial-item:hover {
+        transform: translateY(-5px);
+        border-color: #007BFF;
+    }
+    
+    .testimonial-item img {
+        max-width: 80px;
+        border-radius: 50%;
+        margin-bottom: 15px;
+    }
+    
+    .testimonial-item h3 {
+        margin-top: 0;
+        color: #007BFF;
+    }
+    
+    .testimonial-item p {
+        margin: 0;
+        font-style: italic;
+    }
+    
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .contact-form label {
+        font-size: 1.1em;
+        margin-bottom: 5px;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        padding: 10px;
+        font-size: 1em;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    
+    .contact-form button {
+        align-self: flex-end;
+        padding: 10px 20px;
+        font-size: 1.1em;
+        border-radius: 5px;
+        background-color: #007BFF;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .contact-form button:hover {
+        background-color: #0056b3;
+    }
+   
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Yazılım Web Sitemizin Özellikleri</h1>
+        </header>
+        <nav>
+            <a href="index.html">Ana Sayfa</a>
+            <a href="özellikler.html">Özellikler</a>
+            <a href="iletisim.html">İletişim</a>
+            <a href="hakkinda.html">Hakkımda</a>
+        </nav>
+        <section id="features">
+            <h2>Özellikler</h2>
+            <div class="features">
+                <div class="feature-item">
+                    <img src="software-development.jpg" alt="Yazılım Geliştirme">
+                    <h2>Yazılım Geliştirme</h2>
+                    <p>En yeni teknoloji ve metodolojilerle yazılım geliştirme hizmetleri sunuyoruz.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="cloud-computing.jpg" alt="Bulut Bilişim">
+                    <h2>Bulut Bilişim</h2>
+                    <p>Bulut bilişim çözümlerimizle iş süreçlerinizi daha esnek ve ölçeklenebilir hale getirin.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="cyber-security.jpg" alt="Siber Güvenlik">
+                    <h2>Siber Güvenlik</h2>
+                    <p>Veri güvenliğinizi en üst düzeye çıkarmak için siber güvenlik çözümleri sunuyoruz.</p>
+                </div>
+            </div>
+        </section>
+        <section id="testimonials">
+            <h2>Müşteri Yorumları</h2>
+            <div class="testimonials">
+                <div class="testimonial-item">
+                    <img src="client1.jpg" alt="Müşteri 1">
+                    <h3>Ahmet Yılmaz</h3>
+                    <p>"Bu hizmetler sayesinde işlerimizi çok daha verimli hale getirdik."</p>
+                </div>
+                <div class="testimonial-item">
+                    <img src="client2.jpg" alt="Müşteri 2">
+                    <h3>Ayşe Kaya</h3>
+                    <p>"Siber güvenlik çözümleriyle kendimizi çok daha güvende hissediyoruz."</p>
+                </div>
+                <div class="testimonial-item">
+                    <img src="client3.jpg" alt="Müşteri 3">
+                    <h3>Mehmet Öz</h3>
+                    <p>"Bulut bilişim hizmetleri iş süreçlerimizi inanılmaz kolaylaştırdı."</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>İletişim</h2>
+            <form class="contact-form">
+                <label for="name">İsim:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">E-posta:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mesaj:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Gönder</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        &copy; 2024 Yazılım Web Sitesi. Tüm hakları saklıdır.
+    </footer>
+</body>
+</html>
